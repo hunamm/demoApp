@@ -1,0 +1,14 @@
+{
+  "generator-ui5-app": {
+    "namespace": "com.nm.myapp",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.84.0",
+    "author": "Manuel",
+    "initrepo": false,
+    "appId": "com.nm.myapp",
+    "appURI": "com/nm/myapp",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_fiori_3",
+    "setupCompleted": true
+  }
+}
