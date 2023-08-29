@@ -1,25 +1,319 @@
-<mvc:View
-	controllerName="com.nm.myapp.controller.Main"
-	displayBlock="true"
-	xmlns="sap.m"
+<mvc:View controllerName="com.nm.myapp.controller.Main" displayBlock="true"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
-	core:require="{
+	xmlns:forms="sap.ui.layout.form" core:require="{
 		formatter: 'com/nm/myapp/model/formatter'
 	}">
 
-	<MessagePage
-		title="{i18n>appTitle}"
-		text="{i18n>appTitle}"
-		icon="sap-icon://accept"
-		id="page"
-		description="{i18n>appDescription}">
+	<ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="Manuel Nonnenmacher" />
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:HBox>
+						<m:Avatar src="../img/photo.JPG" class="sapUiMediumMarginEnd" displayShape="Square" />
+						<m:VBox>
+							<m:Title text="Robot Arm Series 9" />
+							<m:Label text="SAP Entwicklung &amp; Beratung" />
+						</m:VBox>
+					</m:HBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<m:Label text="SAP Entwicklung &amp; Beratung"/>
+				</expandedContent>
+
+				<snappedTitleOnMobile>
+					<m:Title text="Robot Arm Series 9" />
+				</snappedTitleOnMobile>
+
+				<actions>
+					<m:Button text="Kontakt" type="Emphasized" press="onContact"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true">
+				<m:Avatar src="../img/photo.JPG" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" displayShape="Square" displaySize="L" />
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Firma:" class="sapUiTinyMarginEnd" />
+						<m:Link text="Nonnenmacher Consulting" target="_blank" href="https://www.nonnenmacher-consulting.com/"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Abschluss:" class="sapUiTinyMarginEnd" />
+						<m:Text text="M.Sc. Wirtschaftsinformatik, TU München (1,5)" />
+					</m:HBox>
+
+					<m:HBox>
+						<m:Label text="Sprachkenntnisse:" class="sapUiTinyMarginEnd" />
+						<m:Text text="{i18n>languages}" />
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Status" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="teilweise verfügbar" state="Warning" class="sapMObjectStatusLarge" />
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Verfügbarkeit" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="3 PT/Woche" icon="sap-icon://shipping-status" class="sapMObjectStatusLarge" />
+				</m:VBox>
+
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection titleUppercase="false" title="Kenntnisse und Interessen">
+				<subSections>
+					<ObjectPageSubSection title="Überblick" showTitle="false">
+						<blocks>
+							<!-- <m:TileContent footer="August 21, 2013" class="sapUiSmallMargin">
+									<m:NewsContent contentText="SAP Unveils Powerful New Player Comparison Tool Exclusively on NFL.com" subheader="SAP News" />
+								</m:TileContent> -->
+
+							<f:GridList id="gridList">
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:items>
+											<m:Title text="SAP Entwicklung und Beratung seit 2007" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:items>
+											<m:Title text="Erweiterung SAP Standard und große Eigenentwicklungen" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:items>
+											<m:Title text="> 10 Jahre Erfahrung in der objektorientierten Entwicklung in ABAP" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:layoutData>
+											<m:FlexItemData growFactor="1" shrinkFactor="0" />
+											<!-- Don't shrink below minimum size. Fill space if available. -->
+										</m:layoutData>
+										<m:items>
+											<m:Title text="> 5 Jahre Erfahrung in Fiori/SAPUI5 und OData" wrapping="true" />
+											<m:Label text="subtitle" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:items>
+											<m:Title text="Qualitätssicherung von Entwicklungen" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+								<f:GridListItem>
+									<m:VBox class="sapUiSmallMargin">
+										<m:items>
+											<m:Title text="Fachliche Führung von Entwicklern" wrapping="true" />
+										</m:items>
+									</m:VBox>
+								</f:GridListItem>
+							</f:GridList>
+
+						</blocks>
+					</ObjectPageSubSection>
+					<ObjectPageSubSection title="Kenntnisse" showTitle="false">
+						<blocks>
+							<forms:SimpleForm class="sapUxAPObjectPageSubSectionAlignContent" layout="ColumnLayout" columnsM="1" columnsL="1" columnsXL="2">
+								<core:Title text="SAP Software und Requirements Engineering" />
+								<m:Label text="Module" />
+								<m:Text text="PP(-PI), HCM, EHSM, LE/WM, QM, MM, Gateway, CRM oder IS-H" />
+								<m:Text text="Analyse, Konzeption / Design, Implementierung, Test und Dokumentation" />
+								<m:Text text="Mockups, User Stories, Glossar, UML, Design Thinking" />
+								<m:Text text="Analyse und Optimierung Custom Code" />
+								<m:Text text="Performanceanalyse und -optimierung" />
+								<m:Text text="Integrative Bewertung von Änderungen" />
+								<m:Text text="Fehlerbehebung / Debugging" />
+								<m:Text text="Design Patterns, Refactoring, Test Driven Development (TDD)" />
+
+
+								<core:Title text="SAP Technologie" />
+								<m:Label text="Backend" />
+								<m:Text text="Klassisches ABAP und modernes ABAP-OO, ABAP/Open SQL (HANA DB), ABAP Core Data Services (CDS) und Annotations (R/3, NetWeaver ECC und S/4HANA)" />
+
+								<m:Label text="Frontend" />
+								<m:Text text="Fiori/SAPUI5, Fiori Elements und Freestyle, UI5 Tooling, JavaScript, TypeScript, Git" />
+
+								<m:Label text="Weitere Frontends" />
+								<m:Text text="Floorplan Manager/Web Dynpro/NWBC, Dynpro, CRM Web UI oder Mobisys Solution Builder (MSB)" />
+
+								<m:Label text="Entwicklungsumgebung" />
+								<m:Text text="ABAP Development Tools (ADT), SE80, Web IDE, Business Application Studio (BAS) und VS Code" />
+
+								<m:Label text="Erweiterungstechniken" />
+								<m:Text text="BAdI, Erweiterungsspot, Customer-Exit oder implizite Erweiterungsoption" />
+
+								<m:Label text="Erweiterungsabgleich" />
+								<m:Text text="SPDD, SPAU und SPAU_ENH" />
+
+								<m:Label text="Schnittstellen" />
+								<m:Text text="OData, ALE/IDoc, JSON, XML, RFC, Webservice (SOAP und REST), dateibasiert (z.B. CSV) oder EDIFACT" />
+
+								<m:Label text="Formularentwicklung" />
+								<m:Text text="Adobe Forms, Smartforms und SAPscript" />
+
+								<m:Label text="Berechtigungsverwaltung" />
+								<m:Text text="PFCG und Konfiguration Fiori Launchpad" />
+
+								<m:Label text="Frameworks" />
+								<m:Text text="Business Object Processing Framework (BOPF), ABAP Unit, BRF+, Workflow" />
+
+								<m:Label text="Tools und Komponenten" />
+								<m:Text text="Business Application Log (BAL), ALV, Elektronische Signatur, Änderungsbelege, Änderungszeiger, Sperrobjekte, Geschäftspartner, Organisationsmanagement, SAP Query" />
+
+								<core:Title text="Interessen" />
+
+								<m:Text text="Spannende Aufgaben mit echtem Mehrwert für den Kunden und dessen Anwender"/>
+								<m:Text text="Agile Softwareentwicklung, Software Design und Architektur" />
+								<m:Text text="Clean Code, SOLID, TDD, Pair Programming, Design Patterns und Best Practices" />
+								<m:Text text="Neue Technologien (z.B. S/4HANA, SAP BTP, ABAP Environment oder ABAP RESTful Application Programming Model)" />
+
+
+
+							</forms:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection title="Products" showTitle="false">
+						<blocks>
+							<m:Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Lebenslauf" level="H2" />
+										<!-- <m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+										<m:OverflowToolbarButton tooltip="Sort" text="Sort" icon="sap-icon://sort" />
+										<m:OverflowToolbarButton tooltip="Filter" text="Filter" icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group" text="Group" icon="sap-icon://group-2" />
+										<m:OverflowToolbarButton tooltip="Settings" text="Settings" icon="sap-icon://action-settings" /> -->
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Von" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Bis" />
+									</m:Column>
+									<m:Column>
+										<m:Text text="Projekt" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Unternehmen" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Branche" />
+									</m:Column>
+
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Text text="August 2023" />
+										<m:Text text="heute" />
+										<m:Text text="Freelancer" />
+										<m:Text text="Nonnenmacher Consulting" />
+										<m:Text text="SAP Entwicklung und Beratung" />
+									</m:ColumnListItem>
+									<m:ColumnListItem>
+										<m:Text text="April 2018" />
+										<m:Text text="Juli 2023" />
+										<m:Text text="Festanstellung SAP Entwickler mit fachlicher Führung" />
+										<m:Text text="Vetter Pharma" />
+										<m:Text text="Pharma" />
+									</m:ColumnListItem>
+									<m:ColumnListItem>
+										<m:Text text="April 2015" />
+										<m:Text text="März 2018" />
+										<m:Text text="Master" />
+										<m:Text text="Technische Universität München" />
+										<m:Text text="Wirtschaftsinformatik" />
+									</m:ColumnListItem>
+									<m:ColumnListItem>
+										<m:Text text="Juli 2016" />
+										<m:Text text="Dezember 2016" />
+										<m:Text text="Master" />
+										<m:Text text="Universidad Nacional de Colombia" />
+										<m:Text text="Statistik" />
+									</m:ColumnListItem>
+									<m:ColumnListItem>
+										<m:Text text="Oktober 2007" />
+										<m:Text text="August 2017" />
+										<m:Text text="Festanstellung SAP Entwickler und Berater" />
+										<m:Text text="LBU Systemhaus AG (heute Zalaris)" />
+										<m:Text text="SAP Consulting und IT-Services" />
+									</m:ColumnListItem>
+									<m:ColumnListItem>
+										<m:Text text="Oktober 2007" />
+										<m:Text text="September 2010" />
+										<m:Text text="Bachelor" />
+										<m:Text text="DHBW Ravensburg" />
+										<m:Text text="Wirtschaftsinformatik" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" title="Kontakt">
+				<subSections>
+					<ObjectPageSubSection title="Kontakt">
+						<blocks>
+							<forms:SimpleForm class="sapUxAPObjectPageSubSectionAlignContent" layout="ColumnLayout" columnsM="2" columnsL="3" columnsXL="4">
+								<!-- <core:Title text="Telefon" /> -->
+								<m:Label text="Adresse" />
+								<m:Text text="{i18n>address}"/>
+
+								<m:Label text="Telefon" />
+								<m:Text text="+49 151 7004 0792" />
+
+								<m:Label text="E-Mail" />
+								<m:Text text="manuel@nonnenmacher-consulting.com" />
+
+								<core:Title text="Social Accounts" />
+
+								<m:Link text="LinkedIn" target="_blank" href="https://www.linkedin.com/in/manuel-nonnenmacher-356818223/"/>
+								<m:Link text="Xing" target="_blank" href="https://www.xing.com/profile/Manuel_Nonnenmacher/cv"/>
+								<m:Link text="Instagram" target="_blank" href="https://www.instagram.com/manuelnonnenmacher/"/>
+								<!-- <m:Link text="X" target="_blank" href="https://twitter.com/bumhunter"/> -->
+
+							</forms:SimpleForm>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+
+	<!-- <MessagePage title="{i18n>appTitle}" text="{i18n>appTitle}" icon="sap-icon://accept" id="page" description="{i18n>appDescription}">
 		<buttons>
-			<Button
-				id="helloButton"
-				text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}"
-				press="sayHello" />
+			<Button id="helloButton" text="{formatter: 'formatter.formatValue', path: 'i18n>btnText'}" press="sayHello" />
 		</buttons>
-	</MessagePage>
+	</MessagePage> -->
 
 </mvc:View>

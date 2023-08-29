@@ -1,0 +1,20 @@
+.bulletlist {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px;
+}
+
+.custom-ul {
+    padding: 0 0 0 2em;
+  }
+  
+  .custom-ul > li {
+    padding-left: 0.8em;
+  }
+  
+  .custom-ul > li::marker {
+      content:"\276F";
+      color: #001b65;
+      font-weight: bold;
+  }
