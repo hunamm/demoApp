@@ -17,7 +17,7 @@
 
 				<snappedHeading>
 					<m:HBox>
-						<m:Avatar src="../img/photo.JPG" class="sapUiMediumMarginEnd" displayShape="Square" />
+						<m:Avatar src="{ value: 'com/nm/myapp/img/photo.JPG', formatter: 'sap.ui.require.toUrl' }" class="sapUiMediumMarginEnd" displayShape="Square" />
 						<m:VBox>
 							<m:Title text="Robot Arm Series 9" />
 							<m:Label text="SAP Entwicklung &amp; Beratung" />
@@ -41,7 +41,7 @@
 
 		<headerContent>
 			<m:FlexBox wrap="Wrap" fitContainer="true">
-				<m:Avatar src="../img/photo.JPG" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" displayShape="Square" displaySize="L" />
+				<m:Avatar src="{ value: 'com/nm/myapp/img/photo.JPG', formatter: 'sap.ui.require.toUrl' }" class="sapUiMediumMarginEnd sapUiSmallMarginBottom" displayShape="Square" displaySize="L" />
 
 				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
 					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
