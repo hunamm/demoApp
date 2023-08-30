@@ -1,0 +1,106 @@
+<mvc:View controllerName="com.nm.myapp.controller.Timeline"
+    xmlns="sap.suite.ui.commons"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+
+
+    <Timeline class="sapUxAPObjectPageSubSectionFitContainer" id="idTimeline" enableDoubleSided="true" groupBy="HireDate" growingThreshold="0" showHeaderBar ="false" height="100%" enableScroll="false">
+        <content>
+            <TimelineItem dateTime="August 2023" userName="Nonnenmacher Consutling" text="SAP Entwicklung und Beratung" status="Success" icon="sap-icon://favorite">
+            </TimelineItem>
+            <TimelineItem dateTime="April 2018" userName="Vetter Pharma" text="SAP Entwicklung mit fachlicher Führung, &#10; Pharmazulieferer &#10; &#10; bis September 2023" icon="sap-icon://employee">
+            </TimelineItem>
+            <TimelineItem dateTime="Juli 2016" userName="Universidad Nacional de Colombia" text="Masterstudiengang Statistik &#10; &#10; bis Dezember 2016" icon="sap-icon://education">
+            </TimelineItem>
+            <TimelineItem dateTime="April 2015" userName="Technische Universität München" text="Masterstudiengang Wirtschaftsinformatik &#10; &#10; bis März 2018, Abschluss Master of Science" icon="sap-icon://education">
+            </TimelineItem>
+            <TimelineItem dateTime="Oktober 2007" userName="LBU Systemhaus AG (heute Zalaris)" text="SAP Entwicklung und Beratung, &#10; SAP Consulting und IT-Services im sozialen Bereich &#10; &#10; bis August 2017" icon="sap-icon://employee">
+            </TimelineItem>
+            <TimelineItem dateTime="Oktober 2007" userName="DHBW Ravensburg" text="Bachelorstudiengang Wirtschaftsinformatik &#10; &#10; Dualer Partner war die LBU Systemhaus AG &#10; &#10; bis September 2010, Abschluss Bachelor of Science" icon="sap-icon://education">
+            </TimelineItem>
+            <TimelineItem dateTime="September 2004" userName="Technisches Gymnasium Ravensburg" text="Profilfach Informationstechnik &#10; &#10; bis Juli 2007, Abschluss allgemeine Hochschulreife" icon="sap-icon://education">
+            </TimelineItem>
+
+        </content>
+    </Timeline>
+
+    <m:Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
+        <m:headerToolbar>
+            <m:OverflowToolbar>
+                <m:Title text="Lebenslauf" level="H2" />
+                <!-- <m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+										<m:OverflowToolbarButton tooltip="Sort" text="Sort" icon="sap-icon://sort" />
+										<m:OverflowToolbarButton tooltip="Filter" text="Filter" icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group" text="Group" icon="sap-icon://group-2" />
+										<m:OverflowToolbarButton tooltip="Settings" text="Settings" icon="sap-icon://action-settings" /> -->
+            </m:OverflowToolbar>
+        </m:headerToolbar>
+
+        <m:columns>
+            <m:Column minScreenWidth="Tablet" demandPopin="true">
+                <m:Text text="Von" />
+            </m:Column>
+            <m:Column minScreenWidth="Tablet" demandPopin="true">
+                <m:Text text="Bis" />
+            </m:Column>
+            <m:Column>
+                <m:Text text="Projekt" />
+            </m:Column>
+            <m:Column minScreenWidth="Tablet" demandPopin="true">
+                <m:Text text="Unternehmen" />
+            </m:Column>
+            <m:Column minScreenWidth="Tablet" demandPopin="true">
+                <m:Text text="Branche" />
+            </m:Column>
+
+        </m:columns>
+
+        <m:items>
+            <m:ColumnListItem>
+                <m:Text text="August 2023" />
+                <m:Text text="heute" />
+                <m:Text text="Freelancer" />
+                <m:Text text="Nonnenmacher Consulting" />
+                <m:Text text="SAP Entwicklung und Beratung" />
+            </m:ColumnListItem>
+            <m:ColumnListItem>
+                <m:Text text="April 2018" />
+                <m:Text text="Juli 2023" />
+                <m:Text text="Festanstellung SAP Entwickler mit fachlicher Führung" />
+                <m:Text text="Vetter Pharma" />
+                <m:Text text="Pharma" />
+            </m:ColumnListItem>
+            <m:ColumnListItem>
+                <m:Text text="April 2015" />
+                <m:Text text="März 2018" />
+                <m:Text text="Master" />
+                <m:Text text="Technische Universität München" />
+                <m:Text text="Wirtschaftsinformatik" />
+            </m:ColumnListItem>
+            <m:ColumnListItem>
+                <m:Text text="Juli 2016" />
+                <m:Text text="Dezember 2016" />
+                <m:Text text="Master" />
+                <m:Text text="Universidad Nacional de Colombia" />
+                <m:Text text="Statistik" />
+            </m:ColumnListItem>
+            <m:ColumnListItem>
+                <m:Text text="Oktober 2007" />
+                <m:Text text="August 2017" />
+                <m:Text text="Festanstellung SAP Entwickler und Berater" />
+                <m:Text text="LBU Systemhaus AG (heute Zalaris)" />
+                <m:Text text="SAP Consulting und IT-Services" />
+            </m:ColumnListItem>
+            <m:ColumnListItem>
+                <m:Text text="Oktober 2007" />
+                <m:Text text="September 2010" />
+                <m:Text text="Bachelor" />
+                <m:Text text="DHBW Ravensburg" />
+                <m:Text text="Wirtschaftsinformatik" />
+            </m:ColumnListItem>
+        </m:items>
+    </m:Table>
+
+</mvc:View>
