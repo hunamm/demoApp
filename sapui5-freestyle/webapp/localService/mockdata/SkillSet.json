@@ -1,0 +1,247 @@
+[
+    {
+        "Category": "Sprachen",
+        "Skill": "ABAP OO",
+        "Rating": "5"
+    },
+    {
+        "Category": "Sprachen",
+        "Skill": "JavaScript",
+        "Rating": "4"
+    },
+    {
+        "Category": "Sprachen",
+        "Skill": "SAPUI5",
+        "Rating": "4"
+    },
+    {
+        "Category": "Entwicklungsumgebung",
+        "Skill": "Web IDE",
+        "Rating": "5"
+    },
+    {
+        "Category": "Entwicklungsumgebung",
+        "Skill": "Business Application Studio (BAS)",
+        "Rating": "4"
+    },
+    {
+        "Category": "Entwicklungsumgebung",
+        "Skill": "ABAP Development Tools (ADT)",
+        "Rating": "5"
+    },
+    {
+        "Category": "Entwicklungsumgebung",
+        "Skill": "SE80",
+        "Rating": "5"
+    },
+    {
+        "Category": "Frameworks",
+        "Skill": "ABAP Test Cockpit (ATC)",
+        "Rating": "5"
+    },
+    {
+        "Category": "Frameworks",
+        "Skill": "Business Objects Processing Framework (BOPF)",
+        "Rating": "4"
+    },
+    {
+        "Category": "Frameworks",
+        "Skill": "ABAP RESTful Application Programming Model (RAP)",
+        "Rating": "1"
+    },
+    {
+        "Category": "Frameworks",
+        "Skill": "ABAP Core Data Services (CDS)",
+        "Rating": "4"
+    },
+    {
+        "Category": "Formulare",
+        "Skill": "Adobe Forms",
+        "Rating": "4"
+    },
+    {
+        "Category": "Formulare",
+        "Skill": "Smartforms",
+        "Rating": "5"
+    },
+    {
+        "Category": "Formulare",
+        "Skill": "SAPscript",
+        "Rating": "3"
+    },
+    {
+        "Category": "Konzepte",
+        "Skill": "Fiori",
+        "Rating": "4"
+    },
+    {
+        "Category": "Konzepte",
+        "Skill": "Geschäftspartner",
+        "Rating": "4"
+    },
+    {
+        "Category": "Konzepte",
+        "Skill": "Organisationsmanagement",
+        "Rating": "4"
+    },
+    {
+        "Category": "Konzepte",
+        "Skill": "ABAP Unit",
+        "Rating": "4"
+    },
+    {
+        "Category": "Konzepte",
+        "Skill": "Workflow",
+        "Rating": "3"
+    },
+    {
+        "Category": "Schnittstellen",
+        "Skill": "OData",
+        "Rating": "5"
+    },
+    {
+        "Category": "Schnittstellen",
+        "Skill": "IDoc",
+        "Rating": "4"
+    },
+    {
+        "Category": "Schnittstellen",
+        "Skill": "RFC",
+        "Rating": "5"
+    },
+    {
+        "Category": "Schnittstellen",
+        "Skill": "XML",
+        "Rating": "5"
+    },
+    {
+        "Category": "Schnittstellen",
+        "Skill": "Dateischnittstellen (z.B. CSV)",
+        "Rating": "5"
+    },
+    {
+        "Category": "Erweiterung",
+        "Skill": "BAdI, User-Exits, Enhancements",
+        "Rating": "5"
+    },
+    {
+        "Category": "Erweiterung",
+        "Skill": "SPDD, SPAU, SPAU_ENH",
+        "Rating": "5"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "EHSM",
+        "Rating": "4"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "PP-PI",
+        "Rating": "3"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "LE/WM",
+        "Rating": "4"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "HCM",
+        "Rating": "4"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "QM",
+        "Rating": "3"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "CRM",
+        "Rating": "4"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "IS-H",
+        "Rating": "4"
+    },
+    {
+        "Category": "Domänen Know-How",
+        "Skill": "SolutionManager",
+        "Rating": "2"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Clean Code",
+        "Rating": "5"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "TDD",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Design Patterns",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Refactoring",
+        "Rating": "5"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Pair Programming",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "SOLID",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Code Reviews",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Software Architektur",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Erweiterbarkeit, Wartbarkeit und Wiederverwendbarkeit",
+        "Rating": "4"
+    },
+    {
+        "Category": "Prinzipien",
+        "Skill": "Abgleich SAP Standard",
+        "Rating": "5"
+    },
+    {
+        "Category": "Methodik",
+        "Skill": "User Stories",
+        "Rating": "4"
+    },
+    {
+        "Category": "Methodik",
+        "Skill": "Software Design Document (SDD)",
+        "Rating": "3"
+    },
+    {
+        "Category": "Methodik",
+        "Skill": "Unified Modeling Language (UML)",
+        "Rating": "4"
+    },
+    {
+        "Category": "Frameworks",
+        "Skill": "Floorplan Manager / Web Dynpro / NWBC",
+        "Rating": "4"
+    },
+    {
+        "Category": "Methodik",
+        "Skill": "Best Practices",
+        "Rating": "5"
+    }
+]

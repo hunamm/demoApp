@@ -2,6 +2,7 @@
 	xmlns="sap.uxap"
 	xmlns:m="sap.m"
 	xmlns:f="sap.f"
+	xmlns:t="sap.ui.table"
 	xmlns:c="sap.suite.ui.commons"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
@@ -139,9 +140,12 @@
 					<ObjectPageSubSection title="Kenntnisse" showTitle="false">
 						<blocks>
 							<m:VBox >
+								<!-- Software & Requirements Engineering -->
+								<m:FormattedText htmlText="{view>/engineeringHTML}"/>
+
 								<forms:SimpleForm class="sapUxAPObjectPageSubSectionAlignContent" layout="ColumnLayout" columnsM="1" columnsL="1" columnsXL="2">
-									<core:Title text="SAP Software und Requirements Engineering" />
-									<m:Label text="Module" />
+									<!-- <core:Title text="SAP Software und Requirements Engineering" /> -->
+									<!-- <m:Label text="Module" />
 									<m:Text text="PP(-PI), HCM, EHSM, LE/WM, QM, MM, Gateway, CRM oder IS-H" />
 									<m:Text text="Analyse, Konzeption / Design, Implementierung, Test und Dokumentation" />
 									<m:Text text="Mockups, User Stories, Glossar, UML, Design Thinking" />
@@ -149,7 +153,7 @@
 									<m:Text text="Performanceanalyse und -optimierung" />
 									<m:Text text="Integrative Bewertung von Änderungen" />
 									<m:Text text="Fehlerbehebung / Debugging" />
-									<m:Text text="Design Patterns, Refactoring, Test Driven Development (TDD)" />
+									<m:Text text="Design Patterns, Refactoring, Test Driven Development (TDD)" /> -->
 
 
 									<core:Title text="SAP Technologie" />
@@ -187,9 +191,9 @@
 									<m:Text text="Business Application Log (BAL), ALV, Elektronische Signatur, Änderungsbelege, Änderungszeiger, Sperrobjekte, Geschäftspartner, Organisationsmanagement, SAP Query" />
 
 								</forms:SimpleForm>
-								
+
 								<!-- Interessen -->
-								<m:FormattedText htmlText="{view>/HTML}"/>
+								<m:FormattedText htmlText="{view>/interestsHTML}"/>
 
 							</m:VBox>
 
@@ -232,6 +236,84 @@
 					<ObjectPageSubSection title="Lebenslauf">
 						<blocks>
 							<mvc:XMLView viewName="com.nm.myapp.view.Timeline"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" title="Skills">
+				<subSections>
+					<ObjectPageSubSection title="Skills">
+						<blocks>
+
+							<!-- ResponsiveTable -->
+							<m:Table items="{view>/Skills}" class="sapUxAPObjectPageSubSectionFitContainer">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Skills" level="H2" />
+										<m:ToolbarSpacer/>
+										<!-- <m:Button tooltip="Sortieren" icon="sap-icon://sort" press="onSortButtonPressed"/>
+										<m:Button tooltip="Filtern" icon="sap-icon://filter" press="onFilterButtonPressed"/> -->
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Skill" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Kategorie" />
+									</m:Column>
+									<m:Column>
+										<m:Text text="Selbsteinschätzung" />
+									</m:Column>
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:cells>
+											<m:Text text="{view>Skill}"/>
+											<m:Text text="{view>Category}"/>
+											<m:RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="{view>Rating}"/>
+										</m:cells>
+									</m:ColumnListItem>
+
+								</m:items>
+							</m:Table>
+
+
+							<!-- Grid Table -->
+							<!-- <t:Table rows="{view>/Skills}" filter="filterPrice">
+								<t:extension>
+									<m:OverflowToolbar style="Clear">
+										<m:Title id="title" text="Products"/>
+										<m:ToolbarSpacer/>
+										<m:SearchField placeholder="Filter" search="filterGlobally"/>
+									</m:OverflowToolbar>
+								</t:extension>
+								<t:columns>
+									<t:Column filterProperty="Skill">
+										<m:Label text="Skill" />
+										<t:template>
+											<m:Text text="{view>Skill}" wrapping="false" />
+										</t:template>
+									</t:Column>
+									<t:Column filterProperty="Category" defaultFilterOperator="StartsWith">
+										<m:Label text="Kategorie" />
+										<t:template>
+											<m:Text text="{view>Category}" wrapping="false" />
+										</t:template>
+									</t:Column>
+									<t:Column filterProperty="Rating" defaultFilterOperator="StartsWith">
+										<m:Label text="Selbsteinschätzung" />
+										<t:template>
+											<m:Text text="{view>Rating}" wrapping="false" />
+										</t:template>
+									</t:Column>
+
+								</t:columns>
+							</t:Table> -->
+
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
